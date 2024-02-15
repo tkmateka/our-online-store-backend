@@ -17,5 +17,13 @@ module.exports = {
         } catch (error) {
             res.status(500).send(error)
         }
+    },
+    getUser: async (req, res) => {
+        try {
+            const result = await User.findOne(req.params)
+            res.status(200).send(result)
+        } catch (error) {
+            res.status(500).send(error)
+        }
     }
 }

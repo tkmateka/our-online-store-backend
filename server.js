@@ -1,6 +1,11 @@
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 3000
+const cors = require('cors')
+const corsOptions = {
+    origin: 'http://localhost:4200',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 
 const mongoose = require('mongoose')
 
@@ -10,6 +15,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/our-online-store')
 
 // Middleware
 app.use(express.json())
+app.use(cors())
 
 // Routes
 const routes = require('./routes/routes');

@@ -8,5 +8,6 @@ router.get('/', UserController.defaultRoute);
 
 // User routes
 router.post('/add-user', UserController.addUser);
+router.get('/get-user/:email', UserController.getUser);
 
 module.exports = router;
