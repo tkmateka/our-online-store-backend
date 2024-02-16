@@ -4,7 +4,7 @@
   "description": "This is our online store backend application",
   "main": "server.js",
   "scripts": {
-    "start-dev": "nodemon server"
+    "start": "nodemon server"
   },
   "author": "Tukiso Mateka",
   "license": "ISC",
